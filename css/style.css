@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/static/WorkSans-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/static/WorkSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/static/WorkSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "WorkSans", sans-serif;
+}
+
+.container {
+  background-image: url("../assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body-heading {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.heading {
+  font-size: 35px;
+  font-weight: bold;
+}
+.card-body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-body {
+  background-color: white;
+  min-height: 400px;
+  width: 600px;
+  margin-top: 400px;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 30px black;
+}
+
+.card-items {
+  min-height: 50px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.card-items-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.card-item-ques:hover {
+  color: #ad28eb;
+  cursor: pointer;
+}
+
+.card-item-icons {
+  display: flex;
+}
+
+.card-item-para {
+  display: none;
+  font-size: 18px;
+  margin: 5px 0;
+  padding: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease-out;
+  -webkit-transition: max-height 1s ease-out;
+  -moz-transition: max-height 1s ease-out;
+  -ms-transition: max-height 1s ease-out;
+  -o-transition: max-height 1s ease-out;
+}
+
+.hide-icon {
+  display: none;
+}
+
+
+/* For tab devices */
+@media (max-width: 768px) {
+  .card-body {
+    width: 90%;
+    margin-top: 300px;
+    padding: 20px;
+  }
+
+  .card-item-para {
+    font-size: 16px;
+  }
+
+  .card-body-heading {
+    gap: 10px;
+  }
+
+  .container {
+    height: 35vh;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .container {
+    background-image: url("../assets/images/background-pattern-mobile.svg");
+    height: 50vh;
+    padding: 10px;
+  }
+
+  .card-body {
+    width: 95%;
+    margin-top: 550px;
+    padding: 15px;
+  }
+
+  .card-item-para {
+    font-size: 14px;
+  }
+
+  .card-items-content {
+    gap: 10px;
+  }
+}
